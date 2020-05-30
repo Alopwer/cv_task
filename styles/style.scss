@@ -405,6 +405,8 @@ aside {
     &-status {
         position: relative;
         font-size: 0.8rem;
+        width: 80px;
+        padding-right: 5px;
         & > p {
             color: $second_color;
             margin-left: 5px;
@@ -719,7 +721,10 @@ td {
 	td:nth-of-type(9):before { content: "Result"; }
 	td:nth-of-type(10):before { content: "Budget"; }
 	td:nth-of-type(11):before { content: "Spent"; }
-	td:nth-of-type(12):before { content: "CR/Unit"; }
+    td:nth-of-type(12):before { content: "CR/Unit"; }
+    .table-status {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 662px) {

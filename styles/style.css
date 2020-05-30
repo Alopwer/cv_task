@@ -513,6 +513,8 @@ aside > div {
 .table-status {
   position: relative;
   font-size: 0.8rem;
+  width: 80px;
+  padding-right: 5px;
 }
 
 .table-status > p {
@@ -844,6 +846,9 @@ td:last-child {
   }
   td:nth-of-type(12):before {
     content: "CR/Unit";
+  }
+  .table-status {
+    width: 100%;
   }
 }
 
