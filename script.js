@@ -64,7 +64,8 @@ Array.prototype.forEach.call(percentages, (pc, i) => {
 })
 Array.prototype.forEach.call(progressbarsContainers, (pg, i) => {
     const text = percentages[i].innerText
-    const value = text.slice(0, text.length - 1) * 10
+    const multiplier = document.getElementsByClassName('table__value')[i].innerText.split(',').join('')
+    const value = text.slice(0, text.length - 1) * multiplier / 100
     if (value) {
         pg.addEventListener('mouseover', () => {
             const div = document.createElement('div')
