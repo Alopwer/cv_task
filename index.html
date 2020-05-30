@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Rebellion</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1 class="header-logo">Carbon Rebellion</h1>
+                <div class='header-info'>
+                    <div>
+                        <img src="./images/bell.svg">
+                    </div>
+                    <div class='header-exit'>
+                        <img src="./images/sign-out.svg">
+                        <span>Sign out</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main">
+                <aside>
+                    <div>
+                        <div class="menu">
+                            <div class="menu__item"></div>
+                        </div>
+                        <div class="user-info">
+                            <div>
+                                <img src="./images/avatar.png" alt="Avatar">
+                            </div>
+                            <h3>John Stevenson</h3>
+                            <h4>Managing director</h4>
+                        </div>
+                        <nav>
+                            <ul class="nav-list">
+                                <li class="nav-list__item">
+                                    <img src="./images/campains.svg">
+                                    <span>Campains</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/tarrifs.svg">
+                                    <span>Tariffs</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/users.svg">
+                                    <span>Admin Users</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/user.svg">
+                                    <span>Suppliers</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/data.svg">
+                                    <span>Data Hub</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/taxes.svg">
+                                    <span>Costs & Taxes</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/reports.svg">
+                                    <span>Reports</span>
+                                </li>
+                                <li class="nav-list__item">
+                                    <img src="./images/settings.svg">
+                                    <span>Settings</span>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+                <section class="content">
+                    <div class="content-header">
+                        <h2>Campaigns</h2>
+                        <div class="content-add">
+                            <div class="content-date">
+                                <div>
+                                    <p class="content-date__title">
+                                        Last 30 days: 8 Jul 2019 - 6 Aug 2019
+                                    </p>
+                                    <p class="content-date__note">
+                                        Note: Does not include today's data
+                                    </p>
+                                </div>
+                                <img src="./images/caret.svg" class="caret">
+                            </div>
+                            <div class="content-update">
+                                <span>Updated 5 minutes ago</span>
+                                <button class="content-update__btn"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-main">
+                        <div class="table">
+                            <div class="table-options">
+                                <button class="table-filter">
+                                    <img src="./images/stream.svg">
+                                    <span>Filter</span>
+                                    <img src="./images/caret.svg" class="caret">
+                                </button> 
+                                <button class="table-create">
+                                    <img src="./images/add.svg">
+                                    <span>Create Campaign</span>
+                                </button>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="table-checkbox table-checkbox__main">
+                                                <input type="checkbox">
+                                            </div> 
+                                        </th>
+                                        <th></th>
+                                        <th>Branch</th>
+                                        <th>Campaign Name</th>
+                                        <th>Status</th>
+                                        <th>Start</th>
+                                        <th>End</th>
+                                        <th>Target</th>
+                                        <th>Result</th>
+                                        <th>Budget</th>
+                                        <th>Spent</th>
+                                        <th>CR/Unit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>Electrabel</p><span>Electricity</span></td>
+                                        <td class="table-company">BE - Summer Deal Elec</td>
+                                        <td class="table-status"><p class="table-status__info">Inactive</p></td>
+                                        <td><div class="table__date"><span>14/07/2019</span><span>00:00</span></div></td>
+                                        <td><div class="table__date"><span>21/07/2019</span><span>00:00</span></div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">30,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>Electrabel</p><span>Gas</span></td>
+                                        <td class="table-company">FR - Summer Deal Elec</td>
+                                        <td class="table-status"><p class="table-status__info">Active</p></td>
+                                        <td><div class="table__date"><span>21/07/2019</span><span>00:00</span></div></td>
+                                        <td><div class="table__date"><span>28/07/2019</span><span>00:00</span></div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">49%</span>
+                                        </td>
+                                        <td class="table__center">20,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">52%</span>
+                                        </td>
+                                        <td class="table__center">20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>GDF</p><span>Electricity</span></td>
+                                        <td class="table-company">BE - June Base Promo Gas</td>
+                                        <td class="table-status"><p class="table-status__info">Inactive</p></td>
+                                        <td><div class="table__date">Ongoing</div></td>
+                                        <td><div class="table__date">Ongoing</div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">30,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>GDF</p><span>Gas</span></td>
+                                        <td class="table-company">FR - June Base Promo Gas</td>
+                                        <td class="table-status"><p class="table-status__info">Active</p></td>
+                                        <td><div class="table__date"><span>14/07/2019</span><span>00:00</span></div></td>
+                                        <td><div class="table__date"><span>30/07/2019</span><span>00:00</span></div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">21%</span>
+                                        </td>
+                                        <td class="table__center">30,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">78%</span>
+                                        </td>
+                                        <td class="table__center">50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>ENGIE</p><span>Electricity</span></td>
+                                        <td class="table-company">BE - July Deal Elec</td>
+                                        <td class="table-status"><p class="table-status__info">Inactive</p></td>
+                                        <td><div class="table__date"><span>10/07/2019</span><span>00:00</span></div></td>
+                                        <td><div class="table__date"><span>29/07/2019</span><span>00:00</span></div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">10,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">0%</span>
+                                        </td>
+                                        <td class="table__center">-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>ENGIE</p><span>Gas</span></td>
+                                        <td class="table-company">FR - July Deal Gas</td>
+                                        <td class="table-status"><p class="table-status__info">Active</p></td>
+                                        <td><div class="table__date">Ongoing</div></td>
+                                        <td><div class="table__date">Ongoing</div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">85%</span>
+                                        </td>
+                                        <td class="table__center">30,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">29%</span>
+                                        </td>
+                                        <td class="table__center">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="table-checkbox">
+                                                <input type="checkbox">
+                                            </div>  
+                                        </td>
+                                        <td>
+                                            <label class="table-switch">
+                                                <input type="checkbox" class="switcher">
+                                                <span class="table-switch__slider"></span>
+                                            </label>
+                                        </td>
+                                        <td class="table-branch"><p>EDF</p><span>Electricity</span></td>
+                                        <td class="table-company">BE - Summer Deal Elec</td>
+                                        <td class="table-status"><p class="table-status__info">Inactive</p></td>
+                                        <td><div class="table__date"><span>10/07/2019</span><span>00:00</span></div></td>
+                                        <td><div class="table__date"><span>29/07/2019</span><span>00:00</span></div></td>
+                                        <td class="table__center">1000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">58%</span>
+                                        </td>
+                                        <td class="table__center">10,000</td>
+                                        <td class="table__center">
+                                            <div class="table-progress">
+                                                <div class="progressbars"></div>
+                                            </div>
+                                            <span class="table-progress__info">13%</span>
+                                        </td>
+                                        <td class="table__center">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
