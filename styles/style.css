@@ -383,6 +383,30 @@ aside > div {
   font-weight: bold;
 }
 
+.table-search {
+  width: 100%;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2px 4px;
+}
+
+.table-search img {
+  max-width: 16px;
+  margin: 0 3px;
+}
+
+.table-search input {
+  color: #555658;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+}
+
 .table-switch {
   position: relative;
   display: inline-block;
@@ -549,6 +573,20 @@ aside > div {
   margin-top: 3px;
 }
 
+.sortable {
+  cursor: pointer;
+}
+
+.sortable span {
+  position: relative;
+}
+
+.sortable img {
+  position: absolute;
+  right: -15px;
+  width: 10px;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -588,6 +626,14 @@ td {
 td:last-child {
   text-align: right;
   padding-right: 15px;
+}
+
+td:nth-child(3) {
+  width: 100px;
+}
+
+td:nth-child(4) {
+  width: 200px;
 }
 
 @media only screen and (max-width: 1340px) {
@@ -786,6 +832,9 @@ td:last-child {
   td:last-child {
     text-align: left;
     border-bottom: 2px solid silver;
+  }
+  td:nth-child(3), td:nth-child(4) {
+    width: 100%;
   }
   tr:first-child td:first-child {
     border-top: 4px solid silver;

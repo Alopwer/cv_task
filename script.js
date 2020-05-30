@@ -94,3 +94,63 @@ mainCheckbox.addEventListener('change', (e) => {
         handleCheck(false)
     }
 })
+
+
+const input = document.querySelector('.table-search input')
+input.addEventListener('keyup', onSearch)
+function onSearch(e) {
+    const value = e.target.value.toLowerCase()
+    const tr = document.querySelectorAll('tbody tr')
+    Array.prototype.forEach.call(tr, (t, i) => {
+        const campaignName = document.getElementsByClassName('table-branch')
+        if (campaignName[i].children[0].innerText.toLowerCase().indexOf(value)) {
+            t.style.display = 'none'
+        } else {
+            t.style.display = ''
+        }
+    })
+}
+
+const sortableHeaders = document.getElementsByClassName('sortable')
+sortableHeaders[0].addEventListener('click', () => sort(2))
+sortableHeaders[1].addEventListener('click', () => sort(3))
+
+function sort(n) {
+    const table = document.getElementsByTagName("table")[0]
+    let switching = true
+    let dir = 'asc'
+    let shouldSwitch, switchcount = 0
+
+    while (switching) {
+        switching = false
+        rows = table.rows
+    
+        for (i = 1; i < rows.length - 1; i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                  shouldSwitch = true;
+                  break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+        } else {
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}
