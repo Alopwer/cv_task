@@ -1,3 +1,7 @@
+$green : rgb(127, 198, 55);
+$second_color : #A8A9AF;
+$main_color : #555658;
+
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +44,7 @@ header {
                 content: '';
                 width: 5px;
                 height: 5px;
-                background: rgb(0, 180, 0);
+                background: $green;
                 border-radius: 50%;
             }
 
@@ -60,10 +64,10 @@ header {
         }
         span {
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             cursor: pointer;
             &:hover {
-                color: rgb(100, 100, 100);
+                color: $main_color;
             }
         }
     }
@@ -98,8 +102,10 @@ aside {
         border-radius: 50%;
         margin: 0 auto;
         border: 1px solid black;
+        padding: 2px;
         img {
             width: 100%;
+            display: block;
         }
     }
     h3 {
@@ -133,7 +139,7 @@ aside {
         }
         span {
             padding-left: 10px;
-            color: rgb(100, 100, 100);
+            color: $main_color;
             font-size: 0.9rem;
             font-weight: bold;
         }
@@ -147,7 +153,7 @@ aside {
 
 .content {
     width: 100%;
-    padding: 40px 30px 30px;
+    padding: 40px 0 20px;
     background: #F2F2F2;
     margin-left: 200px;
     &-header, &-add, &-date, &-update {
@@ -279,10 +285,10 @@ aside {
     }
     &-branch {
         p {
-            color: #555658;
+            color: $main_color;
         }
         span {
-            color: #A8A9AF;
+            color: $second_color;
             font-size: 0.6rem;
             font-weight: bold;
         }
@@ -400,14 +406,14 @@ aside {
         position: relative;
         font-size: 0.8rem;
         & > p {
-            color: #7F7F7F;
+            color: $second_color;
             margin-left: 5px;
             width: 70px;
             &:before {
                 content: '';
                 display: inline-block;
                 border-radius: 50%;
-                background: #7f7f7f;
+                background: $second_color;
                 width: 5px;
                 height: 5px;
                 top: -3px;
@@ -443,7 +449,7 @@ table {
 }
 th { 
     background: #F8F8F8; 
-    color: #928888; 
+    color: $main_color; 
     border-top: 1px solid silver;
     border-bottom: none;
     font-weight: bold; 
@@ -459,7 +465,7 @@ td {
     border-top: 1px solid silver;
     border-bottom: none;
     vertical-align: middle;
-    color: #424242;
+    color: $main_color;
     font-size: 0.8rem;
     &:last-child {
         text-align: right;
@@ -543,7 +549,7 @@ td {
                 border-bottom: 1px solid #000;
                 h3, h4 {
                     display: block;
-                    animation: op 0.3s;
+                    animation: fade 0.3s;
                     animation-fill-mode: forwards;
                     animation-delay: 0.1s;
                 }
@@ -552,7 +558,7 @@ td {
                 span {
                     display: inline;
                     padding-left: 10px;
-                    animation: op 0.3s;
+                    animation: fade 0.3s;
                     animation-fill-mode: forwards;
                     animation-delay: 0.1s;
                     white-space: nowrap;
@@ -623,6 +629,7 @@ td {
     }
     .content {
         margin-left: 40px;
+        padding: 40px 0;
     }
     .table-filter {
         padding: 1px 4px;
@@ -641,14 +648,6 @@ td {
         }
     }
 }
-@keyframes op {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}   
 
 @media only screen and (max-width: 768px)  {
 	table, thead, tbody, th, td, tr { 
@@ -736,7 +735,7 @@ td {
         }
     }
     .content {
-        padding: 40px 5px;
+        padding: 20px 0;
         &-add {
             flex-direction: column;
         }
@@ -777,3 +776,12 @@ td {
         }
     }
 }
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}   
