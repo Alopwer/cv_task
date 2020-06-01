@@ -26,8 +26,8 @@ const onChangeStatus = (e, i) => {
     statuses[i].classList.toggle('active')
 }
 
-const inputs = document.getElementsByClassName('switcher')
-const statuses = document.getElementsByClassName('table-status__info')
+const inputs = document.querySelectorAll('.switcher')
+const statuses = document.querySelectorAll('.table-status__info')
 Array.prototype.forEach.call(inputs, (input, i) => {
     input.addEventListener('change', (e) => onChangeStatus(e, i))
     if (input.checked) {
@@ -56,15 +56,15 @@ const handleProgressbarStyling = (pc, i) => {
     }
 }
 
-const progressbars = document.getElementsByClassName('progressbars')
-const progressbarsContainers = document.getElementsByClassName('table-progress')
-const percentages = document.getElementsByClassName('table-progress__info')
+const progressbars = document.querySelectorAll('.progressbars')
+const progressbarsContainers = document.querySelectorAll('.table-progress')
+const percentages = document.querySelectorAll('.table-progress__info')
 Array.prototype.forEach.call(percentages, (pc, i) => {
     handleProgressbarStyling(pc, i)
 })
 Array.prototype.forEach.call(progressbarsContainers, (pg, i) => {
     const text = percentages[i].innerText
-    const multiplier = document.getElementsByClassName('table__value')[i].innerText.split(',').join('')
+    const multiplier = document.querySelectorAll('.table__value')[i].innerText.split(',').join('')
     const value = text.slice(0, text.length - 1) * multiplier / 100
     if (value) {
         pg.addEventListener('mouseover', () => {
@@ -80,7 +80,7 @@ Array.prototype.forEach.call(progressbarsContainers, (pg, i) => {
 })
 
 const handleCheck = (value) => {
-    const allCheckboxes = document.getElementsByClassName('table-checkbox')
+    const allCheckboxes = document.querySelectorAll('.table-checkbox')
     Array.prototype.forEach.call(allCheckboxes, (c) => {
         c.children[0].checked = value
     })
@@ -102,7 +102,7 @@ function onSearch(e) {
     const value = e.target.value.toLowerCase()
     const tr = document.querySelectorAll('tbody tr')
     Array.prototype.forEach.call(tr, (t, i) => {
-        const campaignName = document.getElementsByClassName('table-branch')
+        const campaignName = document.querySelectorAll('.table-branch')
         if (campaignName[i].children[0].innerText.toLowerCase().indexOf(value)) {
             t.style.display = 'none'
         } else {
@@ -111,7 +111,7 @@ function onSearch(e) {
     })
 }
 
-const sortableHeaders = document.getElementsByClassName('sortable')
+const sortableHeaders = document.querySelectorAll('.sortable')
 sortableHeaders[0].addEventListener('click', () => sort(2))
 sortableHeaders[1].addEventListener('click', () => sort(3))
 
@@ -127,8 +127,8 @@ function sort(n) {
     
         for (i = 1; i < rows.length - 1; i++) {
             shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
+            x = rows[i].querySelectorAll("td")[n];
+            y = rows[i + 1].querySelectorAll("td")[n];
 
             if (dir == "asc") {
                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
