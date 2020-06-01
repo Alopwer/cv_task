@@ -102,8 +102,8 @@ function onSearch(e) {
     const value = e.target.value.toLowerCase()
     const tr = document.querySelectorAll('tbody tr')
     Array.prototype.forEach.call(tr, (t, i) => {
-        const campaignName = document.querySelectorAll('.table-branch')
-        if (campaignName[i].children[0].innerText.toLowerCase().indexOf(value)) {
+        const campaignName = document.querySelectorAll('.table-company')
+        if (campaignName[i].innerText.toLowerCase().indexOf(value)) {
             t.style.display = 'none'
         } else {
             t.style.display = ''
